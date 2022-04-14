@@ -1,0 +1,33 @@
+package com.company;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) throws java.lang.Exception {
+        //your code here
+        //taking Inputs
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        //function called
+        InsertionSort(arr);
+    }
+    //Insertion sort
+    static void InsertionSort(int[] arr) {
+        for (int i = 0; i < arr.length ; i++) {
+            int current=arr[i];
+            int j=i-1;
+            while(j>=0 && current<arr[j])
+            {
+                arr[j+1]=arr[j];
+                j--;
+            }
+            //placing element
+            arr[j+1]=current;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
