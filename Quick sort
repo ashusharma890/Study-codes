@@ -1,0 +1,58 @@
+package com.company;
+import java.util.*;
+public class Main {
+    static int partition(int[] arr, int lo, int hi) {
+        //lo=1st element
+        //hi=last element
+   int pivot=arr[hi];//pivot= element to be sorted on with
+   int i=lo-1; //i=space provider for elements to be sorted before /after pivot
+        for (int j = lo; j <hi ; j++) {
+            if (arr[j] < pivot)
+            {
+                i++;
+                // swap applied
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        //swap with pivot for elements larger than pivot
+        i++;
+        int temp=arr[i];
+        arr[i]=arr[hi];
+        arr[hi]=temp;
+        return i;
+    }
+    //quicksort function
+    static void quickSort(int[] arr,int lo,int hi)
+    {
+       if(lo<hi)
+       {
+           int pivotIndex=partition(arr, lo, hi);
+
+           quickSort(arr,0,pivotIndex-1);
+           quickSort(arr,pivotIndex+1,hi);
+       }
+    }
+    //taking Inputs
+    static void takingInputs() {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        quickSort(arr,0,n-1);
+
+        //print the sorted array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) throws java.lang.Exception {
+        //your code here
+        takingInputs();
+    }
+}
