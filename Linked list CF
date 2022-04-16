@@ -13,4 +13,11 @@ public class subarr {
         }
             System.out.println(list);
     }
+    
+    // reversing linked list using Collection framework method
+    LinkedList<Integer> list2 = new LinkedList<>();
+       list2.add(1);
+       list2.add(2);
+       Collections.reverse(list2); // reverse function in collection framework
+
 }
