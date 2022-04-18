@@ -1,0 +1,27 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+import java.util.*;
+public class subarr {
+     public static void pushAtBottom(int data,Stack<Integer> s) {
+         if (s.isEmpty()){
+             s.push(data);
+         return;
+     }
+         int top=s.pop();
+         pushAtBottom(data,s);
+         s.push(top);
+
+     }
+
+    public static void main(String[] args) {
+        Stack<Integer> s= new Stack<>();
+        s.push(0);
+        s.push(8);
+        s.push(9);
+
+        pushAtBottom(6,s);
+        while (!s.isEmpty()){
+            System.out.println(s.peek());
+            s.pop();
+        }
+    }
+}
