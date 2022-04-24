@@ -1,0 +1,15 @@
+class Solution
+{
+    public String transform(String s)
+    {
+        // code here
+         String st[] = s.split(" ");
+       String res ="";
+       for(int i=0;i<st.length;i++){
+         char ch=Character.toUpperCase(st[i].charAt(0));
+        String str = st[i].substring(1);
+           res= res+ch+str+" ";
+       }
+       return res.trim();
+    }
+}
