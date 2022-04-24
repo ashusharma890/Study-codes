@@ -1,0 +1,18 @@
+class Solution{
+    static long nPr(long n, long r){
+        // code here
+        long fact1=1,fact2=1,res=0;
+        
+        for(int i=1;i<=n;i++)
+        {
+            fact1=fact1*i;
+        }
+        long r1=n-r;
+        for(int j=1;j<=r1;j++)
+        {
+            fact2=fact2*j;
+        }
+        res=fact1/fact2;
+        return res;
+    }
+}
