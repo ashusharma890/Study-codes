@@ -1,0 +1,12 @@
+class Solution {
+    String removeCharacters(String S) {
+        // code here
+        StringBuilder st=new StringBuilder();
+        for(int i=0;i<S.length();i++)
+        {
+            if(Character.isDigit(S.charAt(i)))
+            st.append(S.charAt(i));
+        }
+        return String.valueOf(st);
+    }
+}
