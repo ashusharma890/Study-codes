@@ -1,0 +1,26 @@
+class Solution 
+{ 
+    static List<String> splitString(String S) 
+    { 
+        // code here 
+        String s1="";
+        String s2="";
+        String s3="";
+        char c;
+        for(int i=0;i<S.length();i++)
+        {
+            c=S.charAt(i);
+            if(c>='a' && c<='z' || c>='A' && c<='Z')
+            s1+=c;
+            else if(Character.isDigit(c))
+            s2+=c;
+            else
+            s3+=c;
+        }
+        List<String> L=new ArrayList<String>(3);
+        L.add(s1);
+        L.add(s2);
+        L.add(s3);
+       return L;
+    }
+} 
