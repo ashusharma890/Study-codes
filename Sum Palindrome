@@ -1,0 +1,38 @@
+class Solution {
+    static long isSumPalindrome(long n){
+        // code here
+         long a=n;
+       for(int i=1;i<=5;i++){
+           if(isPalindrome(a)){
+               return a;
+           }
+           a +=reverse(a);
+           if(isPalindrome(a)){
+               return a;
+           }
+       }
+       return -1;
+    
+    } 
+    static boolean isPalindrome(long n){
+       long tmp=n;
+       long r=0;
+       while(tmp>0){
+           r=(r*10)+(tmp%10);
+           tmp /=10;
+       }
+       if(n==r){
+           return true;
+       }
+       return false;
+   }
+   
+   static long reverse(long n){
+       long r=0;
+       while(n>0){
+           r=(r*10)+(n%10);
+           n /=10;
+       }
+       return r;
+   }
+}
