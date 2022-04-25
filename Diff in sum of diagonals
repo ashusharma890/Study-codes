@@ -1,0 +1,18 @@
+class Solution {
+    int diagonalSumDifference(int N, int[][] Grid) {
+        // code here
+        int diag1=0;
+        int diag2=0;
+        for(int i=0;i<N;i++)
+        {
+            for(int j=0;j<N;j++)
+            {
+                if(i==j)
+                diag1=diag1+Grid[i][j];
+                if(i+j==N-1)
+                diag2=diag2+Grid[i][j];
+            }
+        }
+        return Math.abs(diag1-diag2);
+    }
+}
