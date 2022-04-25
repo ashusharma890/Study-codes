@@ -1,0 +1,33 @@
+class Solution{
+	static int fullPrime(int N){
+	    //code here
+	    int number=N;
+    int rem=0;
+    while(N>0)
+    {
+        rem = N%10;
+        if(isprime(number)==false || isprime(rem)==false)
+        {
+            return 0;
+        }
+        N=N/10;
+    }
+    
+    return 1;
+	}
+	static boolean isprime(int n)
+   {
+       if(n<=1)
+       {
+           return false;
+       }
+       for(int i=2;i<=Math.sqrt(n);i++)
+       {
+           if(n%i==0)
+           {
+               return false;
+           }
+       }
+       return true;
+   }
+}
