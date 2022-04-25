@@ -1,0 +1,26 @@
+class Solution 
+{ 
+    ArrayList<String> extractIntegerWords(String s) 
+    { 
+        // code here
+        ArrayList<String> list= new ArrayList<>();
+         s=s.replaceAll("\\D+"," ");
+        s= s.trim();
+ 
+ 
+        String str[] = new String[s.length()];  
+        str = s.split(" ");
+ 
+         for(int i=0;i<str.length;i++)
+         {
+           list.add(str[i]);
+         }
+
+        if(list.contains("") || list.contains(null))
+      {
+            list.set(0,"No Integers");
+   
+      }
+   return list;
+    }
+} 
