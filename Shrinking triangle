@@ -1,0 +1,15 @@
+class Solution {
+    static String triDownwards(String S){
+        // code here
+        String res=S;
+        for(int i=0;i<S.length()-1;i++){
+        StringBuilder s= new StringBuilder(S);
+        for(int j=0;j<=i;j++)
+        {
+            s.setCharAt(j,'.');
+        }
+        res+=s.toString();
+    }
+    return res;
+}
+};
