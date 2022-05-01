@@ -1,0 +1,22 @@
+
+
+class Solution{
+    public static int doUnion(int a[], int n, int b[], int m) 
+    {
+        //Your code here
+         int count = 0;
+       Set<Integer> set = new HashSet<Integer>();
+       
+       for(int i=0; i<n; i++){
+           if(set.add(a[i])){
+               count++;
+           }
+       }
+       for(int j=0; j<m; j++){
+           if(set.add(b[j])){
+               count++;
+           }
+       }
+       return count;
+    }
+}
