@@ -1,0 +1,24 @@
+
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        Arrays.sort( strs );
+        
+        int n = strs.length;
+        
+        // Since the strings are sorted we just need to compare first and last string
+        String first = strs[0];
+        String last = strs[n-1];
+        
+        for(int i=0; i<first.length(); i++) {
+            // If a mismatch founds, return the substring before the mismatch.
+            if( first.charAt(i) != last.charAt(i) ) {
+                return first.substring(0, i);
+            }
+        }
+        // First string is the prefix of last string, hence it will be prefix of all the strings in between
+        return first;
+    }
+}
+
+
