@@ -1,0 +1,24 @@
+
+
+class Solution {
+    public int[] createTargetArray(int[] nums, int[] index) {
+        int[] target= new int[nums.length];
+        for(int i=0;i<target.length;i++)
+        {
+         int pos=index[i];
+         int val=nums[i];
+         int j=i;
+          while(j>pos)
+          {
+           target[j]=target[j-1];
+            j--;
+          }
+       target[j]=val;
+
+       } 
+    return target;
+    }
+}
+
+
+
