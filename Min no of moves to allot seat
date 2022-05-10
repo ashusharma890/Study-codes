@@ -1,0 +1,20 @@
+
+
+class Solution {
+    public int minMovesToSeat(int[] seats, int[] students) {
+        int min=0;
+       Arrays.sort(seats); //sort arrays
+       Arrays.sort(students);
+       int i=0,j=0;
+        while(i<seats.length && j<students.length) //running a loop in both the array elements
+        {
+            int seat=Math.abs(seats[i]-students[j]); //checking absolute difference
+            min+=seat; //adding to count
+                i++; //incrementing loop iteration
+                j++;
+        }
+        return min;
+    }
+}
+
+
