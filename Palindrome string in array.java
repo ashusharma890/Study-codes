@@ -37,4 +37,20 @@ class Solution {
   }
 }
 
+//Stringbuilder approach
+
+class Solution {
+    public String firstPalindrome(String[] words) {
+        
+        for(String i : words){
+            StringBuilder str = new StringBuilder(i);
+            str.reverse();
+            if(i.equals(str.toString())) return i;
+        }
+        
+        return "";
+    }   
+}
+
+
 
