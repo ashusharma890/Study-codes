@@ -116,12 +116,12 @@ public class Main {
 
     public static void main(String[] args) {
         Main list=new Main();// linked list object of class
-        list.addFirst("Kitty");
-        list.addLast("ki");
-        list.addLast("chutanki");
-        list.addLast("maa");
-        list.addLast("urf");
-        list.addLast("Richa Singh");
+        list.addFirst("Hi");
+        list.addLast("Hello");
+        list.addLast("Namaste");
+        list.addLast("Bonjour");
+        list.addLast("Bella Ciao");
+        list.addLast("Mon amour");
         list.printList();
         System.out.println(list.sizeOflList());
     }
